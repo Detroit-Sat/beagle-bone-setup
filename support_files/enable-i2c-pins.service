@@ -1,0 +1,10 @@
+[Unit]
+Description=Enable I2C pins
+After=generic-board-startup.service
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/enable-i2c-pins.sh
+
+[Install]
+WantedBy=multi-user.target
